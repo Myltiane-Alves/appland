@@ -19,7 +19,12 @@ export default function ContentHeader() {
       gap="20"
       direction={{ base: "column", md: "row" }}
     >
-      <Box maxWidth={{ md: '27.rem' }} flex="1">
+      <Box
+        maxWidth={{ md: '27.rem' }}
+        flex="1"
+        pt="70px"
+
+      >
         <Stack>
           <Text
             as="p"
@@ -114,19 +119,17 @@ function ProjectImage(props: ProjectImageProps) {
     <Box
       flex={{ md: '1' }}
       position="relative"
-      height="25rem"
-      width="100%"
+      height={{ base: '30rem', md: '40rem' }}
+      width={{ base: '100%', md: '100%' }}
       overflow="hidden"
+
     >
       <Box
-        position="absolute"
-        left="10"
-        top="10"
-        
-        height="31.25rem"
+        position="absolute"     
+        height={{ base: '18rem', md: '19rem', lg: '27rem', xl: '35rem' }}
         rounded="lg"
         overflow="hidden"
-       
+        pt={{ base: '10rem', md: '30px' }}
       >
 
         <Image
@@ -134,6 +137,7 @@ function ProjectImage(props: ProjectImageProps) {
           alt={alt}
           objectFit="cover"
           width="100%"
+          height="100%"
         />
       </Box>
     </Box>

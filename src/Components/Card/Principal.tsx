@@ -1,77 +1,89 @@
-import { Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
+import { Box, SimpleGrid } from '@chakra-ui/react'
 import * as React from 'react'
-import { SiHive, SiMarketo, SiMicrosoft } from 'react-icons/si'
-import { ActionButton } from './ActionButton'
-import { PricingCard } from './PricingCard'
 
+import { PricingCard } from './PricingCard'
+import { CheckIcon} from '@chakra-ui/icons'
 export const Principal = () => (
   <Box
     as="section"
-    bg={useColorModeValue('gray.50', 'gray.800')}
     py="14"
-    px={{ base: '4', md: '8' }}
+    px={{ base: '4', md: '4' }}
   >
     <SimpleGrid
-      columns={{ base: 1, lg: 3 }}
-      spacing={{ base: '8', lg: '0' }}
-      maxW="7xl"
+      columns={{ base: 1, md: 2, lg: 2, xl: 4 }}
+      spacing={{ base: '8', lg: '8' }}
+      maxW="100%"
       mx="auto"
       justifyItems="center"
       alignItems="center"
+      
     >
       <PricingCard
+        bg={'rgba(255, 255, 255, 0.08)'}
         data={{
-          price: '$29',
-          name: 'Application UI',
+          title: 'Plano Bronze',
+          price: 'R$ 30',
+          name: 'Uso de 5 colaboradores',
           features: [
-            'All application UI components',
-            'Lifetime access',
-            'Use on unlimited projects',
-            'Free Updates',
+            'Área de meus registros',
+            'Dashboard',
+            'Acesso de 5 colaboradores',
+            'Suporte exclusivo',
+            'Email corporativo',
           ],
         }}
-        icon={SiMicrosoft}
-        button={
-          <ActionButton variant="outline" borderWidth="2px">
-            Buy now
-          </ActionButton>
-        }
+        icon={CheckIcon}
+        
       />
       <PricingCard
-        zIndex={1}
-        isPopular
-        transform={{ lg: 'scale(1.05)' }}
+        bg={'rgba(255, 255, 255, 0.08)'}
         data={{
-          price: '$49',
-          name: 'Bundle',
+          title: 'Plano Prata',
+          price: 'R$ 50',
+          name: 'Uso de 10 colaboradores',
           features: [
-            'All application UI components',
-            'Lifetime access',
-            'Use on unlimited projects',
-            'Use on unlimited projects',
-            'Free Updates',
+            'Área de meus registros',
+            'Dashboard',
+            'Acesso de 10 colaboradores',
+            'Suporte exclusivo',
+            'Email corporativo',
           ],
         }}
-        icon={SiHive}
-        button={<ActionButton>Buy now</ActionButton>}
+        icon={CheckIcon}
+        
       />
       <PricingCard
+        bg={'rgba(255, 255, 255, 0.08)'}
         data={{
-          price: '$29',
-          name: 'Marketing UI',
+          title: 'Plano Ouro',
+          price: 'R$ 100',
+          name: 'Uso de 20 colaboradores',
           features: [
-            'All application UI components',
-            'Lifetime access',
-            'Use on unlimited projects',
-            'Free Updates',
+            'Área de meus registros',
+            'Dashboard',
+            'Acesso de 10 colaboradores',
+            'Suporte exclusivo',
+            'Email corporativo',
           ],
         }}
-        icon={SiMarketo}
-        button={
-          <ActionButton variant="outline" borderWidth="2px">
-            Buy now
-          </ActionButton>
-        }
+        icon={CheckIcon}
+      />
+      <PricingCard
+        bg={'rgba(255, 255, 255, 0.08)'}
+        data={{
+          title: 'Plano Platina',
+          price: 'R$ 200',
+          name: 'Acessos ilimitados',
+          features: [
+            'Área de meus registros',
+            'Dashboard',
+            'Acesso de 10 colaboradores',
+            'Suporte exclusivo',
+            'Email corporativo',
+          ],
+        }}
+        
+        icon={CheckIcon}
       />
     </SimpleGrid>
   </Box>

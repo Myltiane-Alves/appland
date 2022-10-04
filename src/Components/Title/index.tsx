@@ -4,7 +4,7 @@ import {
   Text,
   Stack,
   Box,
-  Flex, 
+  Flex,
 } from '@chakra-ui/react';
 
 
@@ -16,6 +16,7 @@ export default function Title() {
       mt="34px"
       justifyContent="space-evenly"
       direction="column"
+      display="block"
     >
       <Heading
         as="h2"
@@ -25,27 +26,34 @@ export default function Title() {
         color="#ffffff"
         textAlign="center"
       >
-       Encontre o plano perfeito
+        Encontre o plano perfeito
       </Heading>
-      <Flex
-        display="flex"
-        alignContent="center"
-        alignItems="center"
-      >
+ 
 
-        <Text
-          as="p"
-          fontSize={{ base: "16px", md: "18px", lg: "20px" }}
-          fontWeight="400"
-          lineHeight="30px"
-          color="#ffffff"
-          textAlign="center"
-          opacity="70%"
-        >
-          Escolha o plano que melhor se encaixa na sua empresa e  faça sua assinatura,
-          dentro de 72h iremos liberar seus acessos.
-        </Text>
-      </Flex>
+      <Text
+        as="p"
+        fontSize={{ base: "16px", md: "18px", lg: "20px" }}
+        fontWeight="400"
+        lineHeight="30px"
+        color="#ffffff"
+        textAlign="center"
+        opacity="70%"
+      >
+        Escolha o plano que melhor se encaixa na sua empresa e  faça
+      </Text>
+
+      <Text
+        as="p"
+        fontSize={{ base: "16px", md: "18px", lg: "20px" }}
+        fontWeight="400"
+        lineHeight="30px"
+        color="#ffffff"
+        textAlign="center"
+        opacity="70%"
+      >
+        sua assinatura, dentro de 72h iremos liberar seus acessos.
+      </Text>
+
     </Stack>
   )
 }

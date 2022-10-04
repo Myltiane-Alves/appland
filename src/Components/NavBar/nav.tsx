@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Center,
   Drawer,
   DrawerContent,
@@ -38,7 +39,7 @@ function NavItem(props: NavItemProps) {
         paddingX="3"
         paddingY={large ? '5' : '2.5'}
         rounded="lg"
-        
+        color= "#FFF"
         _hover={{ color: 'brown.600' }}
         _activeLink={{ bg: 'gray.800', shadow: 'highlight' }}
       >
@@ -50,8 +51,8 @@ function NavItem(props: NavItemProps) {
 }
 
 const items= [
-  {label: 'Início', href: '/'},
-  {label: 'Planos', href: '/plans'},
+  {label: 'Início', href: '/', color: "#FFF"},
+  {label: 'Planos', href: '/plans', color: "#FFF"},
 ]
 
 function DesktopNavItem(props: StackProps) {
@@ -64,10 +65,16 @@ function DesktopNavItem(props: StackProps) {
       {...props}
     >
       {items.map((item) => (
-        <NavItem key={item.href} href={item.href}>
+        <NavItem key={item.href} href={item.href} >
           {item.label}
         </NavItem>
        ))}
+        <Button
+          w="160px"
+          h="50px"
+        >
+          Fazer login
+        </Button>
     </HStack>
   )
 }
@@ -79,6 +86,7 @@ function MobileNavItemGroup(props: StackProps) {
       as="nav"
       aria-label="Main navigation"
       spacing="0"
+      alignSelf="center"
       {...props}
     >
       {items.map((item) => (
@@ -86,6 +94,14 @@ function MobileNavItemGroup(props: StackProps) {
           {item.label}
         </NavItem>
       ))}
+      <Button
+          w={{ base: '200px', md: '160px' }}
+          h={{ base: '70px', md: '50px' }}
+          bg={{ base: '#8a53ff' }}
+          fontSize="32px"
+        >
+        Fazer login
+      </Button>
     </Stack>
   );
 }
@@ -120,7 +136,6 @@ function MobileNavMenu() {
   return (
     <>
       <Center
-       
         color="white"
         width="10"
         height="10"
@@ -137,7 +152,7 @@ function MobileNavMenu() {
       </Center>
       <Drawer isOpen={menu.isOpen} onClose={menu.onClose} placement="bottom">
         <DrawerOverlay />
-        <DrawerContent id="nav-menu" bg="#8a53ff" padding="6" color="#FFF">
+        <DrawerContent id="nav-menu" bg="#330693" padding="6" color="#FFF" fontSize="32px" _active={{color: '#FFF'}}>
           <MobileNavItemGroup />
         </DrawerContent>
       </Drawer>
@@ -149,8 +164,7 @@ function MobileNavMenu() {
 const NavBar = () => {
   
   return (
-    <Box
-      
+    <Box   
       as="header"
       paddingY="4"
       maxWidth="6x1"

@@ -10,7 +10,7 @@ export const Card = (props: CardProps) => {
   const { children, isPopular, ...rest } = props
   return (
     <Box
-      bg={useColorModeValue('white', 'gray.700')}
+      
       position="relative"
       px="6"
       pb="6"
@@ -21,7 +21,7 @@ export const Card = (props: CardProps) => {
       width="100%"
       {...rest}
     >
-      {isPopular && <CardBadge>Popular</CardBadge>}
+      {isPopular }
       {children}
     </Box>
   )

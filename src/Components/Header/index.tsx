@@ -16,11 +16,9 @@ import ContentHeader from "./ContentHeader";
 const Header = () => {
 
   return (
-    <Box as="section">
+    <Box as="section" h="auto" >
       <Box >
-        <Stack spacing="20">
-          <ContentHeader />
-        </Stack>
+        <ContentHeader />
       </Box>
     </Box>
   );

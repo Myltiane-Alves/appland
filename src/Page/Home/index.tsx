@@ -10,6 +10,7 @@ import Card from '../../Components/Card'
 import Footer from '../../Components/Footer'
 import NavBar from '../../Components/NavBar/nav'
 import { Principal } from '../../Components/Card/principal'
+import FooterText from '../../Components/Footer Text'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Title />
       <Principal />
       <Footer />
+      <FooterText />
     </>
   )
 }

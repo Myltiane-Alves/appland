@@ -19,7 +19,9 @@ export default function Companies() {
   return (
     <SimpleGrid
       columns={{ base: 1, md: 2, lg: 4 }}
-      pt={{ base: '20', md: '40' }}
+      pt={{ base: '0', md: '20' }}
+      justifyItems="center"
+      as="section"
     >
 
       <Box>    

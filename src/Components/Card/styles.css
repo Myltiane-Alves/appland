@@ -1,4 +1,9 @@
 .logo-img {
   width: 100px;
 }
-
+.check {
+  color: "#FFF"; 
+  display: "none" !important;
+  flex-shrink: "0";
+  vertical-align: "text-bottom"
+}
