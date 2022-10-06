@@ -10,16 +10,16 @@ import {
   SimpleGrid
 } from '@chakra-ui/react';
 
-import brainnyLogo from '../../assets/brainny-logo.svg'
-import amoPetLogo from '../../assets/amopet-logo.png'
-import busLogo from '../../assets/bus-logo.png'
-import goStudyLogo from '../../assets/go-study-logo.png'
+import Day from '../../assets/Day.png'
+import cyber from '../../assets/cyber.png'
+import connect from '../../assets/connect.png'
+import sound from '../../assets/sound.png'
 import './styles.css'
 export default function Companies() {
   return (
     <SimpleGrid
       columns={{ base: 1, md: 2, lg: 4 }}
-      pt={{ base: '0', md: '20' }}
+      pt={{ base: '0', md: '0' }}
       justifyItems="center"
       as="section"
     >
@@ -27,25 +27,25 @@ export default function Companies() {
       <Box>    
         <Image
           width="200px"
-          src={brainnyLogo}
+          src={Day}
         />
       </Box>
       <Box>    
         <Image
           width="200px"
-          src={amoPetLogo}
+          src={cyber}
         />
       </Box>
       <Box>    
         <Image
           width="200px"
-          src={busLogo}
+          src={connect}
         />
       </Box>
       <Box>    
         <Image
           width="200px"
-          src={goStudyLogo}
+          src={sound}
         />
       </Box>
     </SimpleGrid>

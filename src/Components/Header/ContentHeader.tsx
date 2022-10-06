@@ -6,6 +6,7 @@ import {
   Heading,
   Image,
   Link,
+  SimpleGrid,
   Stack,
   Text,
   useBreakpointValue,
@@ -15,9 +16,10 @@ import header from "../../assets/header-img.png";
 export default function ContentHeader() {
 
   return (
-    <Flex
+    <SimpleGrid
       gap="20"
-      direction={{ base: "column", md: "row" }}
+      columns={{ base: 1, md: 2, lg: 2, xl: 2 }}
+
     >
       <Box
         maxWidth={{ md: '27.rem' }}
@@ -31,7 +33,7 @@ export default function ContentHeader() {
             fontSize={{ base: "16px", md: "18px", lg: "20px" }}
             fontWeight="400"
             lineHeight="36px"
-            color="#ffffff"
+            color="#8A53FF"
             textAlign="left"
           >
             Esquece o ponto manual
@@ -44,7 +46,7 @@ export default function ContentHeader() {
             fontSize={{ base: "24px", md: "32px", lg: "40px" }}
             fontWeight="800"
             lineHeight={{ base: "36px", md: "48px", lg: "60px" }}
-            color="#ffffff"
+            color="#8A53FF"
             textAlign="left"
           >
             Chegou a nova realidade
@@ -57,12 +59,12 @@ export default function ContentHeader() {
             as="p"
             fontSize={{ base: "16px", md: "18px", lg: "20px" }}
             fontWeight="500"
-            lineHeight={{ base: "30px", md: "36px", lg: "48px" }}
-            color="#ffffff"
+            lineHeight={{ base: "30px", md: "36px", lg: "40px" }}
+            color="#8A53FF"
             textAlign="left"
             pt="24px"
           >
-            Com o PontoGo seus colaboradores poderão bater seus pontos de forma fácil e rápida,
+            Com a BatePonto seus colaboradores poderão bater seus pontos de forma fácil e rápida,
             possuindo também uma Dashboard intuitiva.
           </Text>
         </Box>
@@ -72,38 +74,37 @@ export default function ContentHeader() {
           alignItems="left"
         >
           <Button
-            bg="#8a53ff"
+            bg="#8A53FF"
+            _hover={{ bg: '#8a53ffb0', color: '#fff' }}
             borderRadius="5px"
+            border="none"
             mr="15px"
+            color="#fff"
+            w="200px"
+            h="50px"
           >
-            <Link
-              fontSize="16px"
-              fontWeight="400"
-              lineHeight="24px"
-              color="#fff"
-            >
-              Assinar Agora
-            </Link>
+
+            ASSINAR AGORA
+
           </Button>
           <Button
-            bg="transparent"
-            border="1px solid #fff"
+            bg="#00DFF0 "
+            border="none"
             borderRadius="5px"
+            _hover={{ bg: '#00dff0d4', color: '#fff' }}
+            color="#282828"
+            w="200px"
+            h="50px"
+           
           >
-            <Link
-              fontSize="16px"
-              fontWeight="400"
-              lineHeight="24px"
-              color="#fff"
-            >
-              Ver Planos
-            </Link>
+            VER PLANOS
+
           </Button>
         </Box>
       </Box>
 
       <ProjectImage src={header} alt="header" />
-    </Flex>
+    </SimpleGrid>
   );
 };
 
@@ -116,7 +117,7 @@ type ProjectImageProps = {
 function ProjectImage(props: ProjectImageProps) {
   const { src, alt } = props
   return (
-    <Box
+    <Flex
       flex={{ md: '1' }}
       position="relative"
       height={{ base: '30rem', md: '40rem' }}
@@ -125,11 +126,11 @@ function ProjectImage(props: ProjectImageProps) {
 
     >
       <Box
-        position="absolute"     
+        position="absolute"
         height={{ base: '18rem', md: '19rem', lg: '27rem', xl: '35rem' }}
         rounded="lg"
         overflow="hidden"
-        pt={{ base: '10rem', md: '30px' }}
+        pt={{ base: '0', md: '30px' }}
       >
 
         <Image
@@ -140,7 +141,7 @@ function ProjectImage(props: ProjectImageProps) {
           height="100%"
         />
       </Box>
-    </Box>
+    </Flex>
 
   )
 }

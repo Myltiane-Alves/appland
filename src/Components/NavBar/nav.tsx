@@ -39,9 +39,9 @@ function NavItem(props: NavItemProps) {
         paddingX="3"
         paddingY={large ? '5' : '2.5'}
         rounded="lg"
-        color= "#FFF"
+        color= "#00DFF0"
         _hover={{ color: 'brown.600' }}
-        _activeLink={{ bg: 'gray.800', shadow: 'highlight' }}
+        _activeLink={{ color: '#00DFF0' }}
       >
       
         <Text fontFamily="heading">{children}</Text>
@@ -51,8 +51,8 @@ function NavItem(props: NavItemProps) {
 }
 
 const items= [
-  {label: 'Início', href: '/', color: "#FFF"},
-  {label: 'Planos', href: '/plans', color: "#FFF"},
+  {label: 'Início', href: '/', color: "#00DFF0"},
+  {label: 'Planos', href: '/plans', color: "#00DFF0"},
 ]
 
 function DesktopNavItem(props: StackProps) {
@@ -63,6 +63,7 @@ function DesktopNavItem(props: StackProps) {
       aria-label="Main Navigation"
       spacing="8"
       {...props}
+      // bg="red"
     >
       {items.map((item) => (
         <NavItem key={item.href} href={item.href} >
@@ -72,6 +73,10 @@ function DesktopNavItem(props: StackProps) {
         <Button
           w="160px"
           h="50px"
+          border="none"
+          bg="#00DFF0"
+          _hover={{ bg: '#00dff0d4', color: '#fff' }}
+          color="#282828"
         >
           Fazer login
         </Button>
@@ -87,6 +92,7 @@ function MobileNavItemGroup(props: StackProps) {
       aria-label="Main navigation"
       spacing="0"
       alignSelf="center"
+      // bg="#fff"
       {...props}
     >
       {items.map((item) => (
@@ -95,10 +101,11 @@ function MobileNavItemGroup(props: StackProps) {
         </NavItem>
       ))}
       <Button
-          w={{ base: '200px', md: '160px' }}
+          w={{ base: '150px', md: '160px' }}
           h={{ base: '70px', md: '50px' }}
-          bg={{ base: '#8a53ff' }}
-          fontSize="32px"
+          border="1px solid #00DFF0"
+          _hover={{ bg: '#00DFF0', color: '#fff', border: '#00DFF0' }}
+          fontSize="20px"
         >
         Fazer login
       </Button>
@@ -108,13 +115,25 @@ function MobileNavItemGroup(props: StackProps) {
 
 function Headshot() {
   return (
-    <Box>
+    <Box
+      display="flex"
+      alignItems="center"
+    >
         <VisuallyHidden>Home</VisuallyHidden>
+        <Text
+          as="span"
+          fontSize="32px"
+          fontWeight="bold"
+          color="#00DFF0"
+
+        > 
+          BatePonto
+        </Text>
         <Image
           
-          alt="Segun Adebayo"
+          alt="Logo"
           src={logo}    
-          width="50%"
+          width="25%"
           objectFit="cover"
         />
     
@@ -137,8 +156,8 @@ function MobileNavMenu() {
     <>
       <Center
         color="white"
-        width="10"
-        height="10"
+        width="60px"
+        height="45px"
         display={{ base: 'flex', md: 'none' }}
         as="button"
         aria-haspopup="true"
@@ -147,12 +166,13 @@ function MobileNavMenu() {
         id="nav-menu--trigger"
         type="button"
         onClick={menu.onOpen}
+        bg="#00DFF0"
       >
         {menu.isOpen ? <IoIosClose size={30}/> : <AiOutlineMenu size={30}/>}
       </Center>
       <Drawer isOpen={menu.isOpen} onClose={menu.onClose} placement="bottom">
         <DrawerOverlay />
-        <DrawerContent id="nav-menu" bg="#330693" padding="6" color="#FFF" fontSize="32px" _active={{color: '#FFF'}}>
+        <DrawerContent id="nav-menu" bg="#fff" padding="6" color="#00DFF0" fontSize="24px" _active={{color: '#00DFF0'}}>
           <MobileNavItemGroup />
         </DrawerContent>
       </Drawer>

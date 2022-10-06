@@ -10,7 +10,7 @@ export const Principal = () => (
     px={{ base: '4', md: '4' }}
   >
     <SimpleGrid
-      columns={{ base: 1, md: 2, lg: 2, xl: 4 }}
+      columns={{ base: 1, md: 2, lg: 2, xl: 3 }}
       spacing={{ base: '8', lg: '8' }}
       maxW="100%"
       mx="auto"
@@ -20,6 +20,7 @@ export const Principal = () => (
     >
       <PricingCard
         bg={'rgba(255, 255, 255, 0.08)'}
+        border="1px solid rgb(241 241 241)"
         data={{
           title: 'Plano Bronze',
           price: 'R$ 30',
@@ -37,6 +38,7 @@ export const Principal = () => (
       />
       <PricingCard
         bg={'rgba(255, 255, 255, 0.08)'}
+        border="1px solid rgb(241 241 241)"
         data={{
           title: 'Plano Prata',
           price: 'R$ 50',
@@ -54,6 +56,7 @@ export const Principal = () => (
       />
       <PricingCard
         bg={'rgba(255, 255, 255, 0.08)'}
+        border="1px solid rgb(241 241 241)"
         data={{
           title: 'Plano Ouro',
           price: 'R$ 100',
@@ -68,23 +71,7 @@ export const Principal = () => (
         }}
         icon={CheckIcon}
       />
-      <PricingCard
-        bg={'rgba(255, 255, 255, 0.08)'}
-        data={{
-          title: 'Plano Platina',
-          price: 'R$ 200',
-          name: 'Acessos ilimitados',
-          features: [
-            'Área de meus registros',
-            'Dashboard',
-            'Acesso de 10 colaboradores',
-            'Suporte exclusivo',
-            'Email corporativo',
-          ],
-        }}
-        
-        icon={CheckIcon}
-      />
+     
     </SimpleGrid>
   </Box>
 )

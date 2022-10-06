@@ -17,13 +17,14 @@ export default function Title() {
       justifyContent="space-evenly"
       direction="column"
       display="block"
+    
     >
       <Heading
         as="h2"
         fontSize={{ base: "24px", md: "32px", lg: "40px" }}
         fontWeight="800"
         lineHeight="60px"
-        color="#ffffff"
+        color="#8A53FF"
         textAlign="center"
       >
         Encontre o plano perfeito
@@ -33,9 +34,9 @@ export default function Title() {
       <Text
         as="p"
         fontSize={{ base: "16px", md: "18px", lg: "20px" }}
-        fontWeight="400"
+        fontWeight="600"
         lineHeight="30px"
-        color="#ffffff"
+        color="#8A53FF"
         textAlign="center"
         opacity="70%"
       >
@@ -45,9 +46,9 @@ export default function Title() {
       <Text
         as="p"
         fontSize={{ base: "16px", md: "18px", lg: "20px" }}
-        fontWeight="400"
+        fontWeight="600"
         lineHeight="30px"
-        color="#ffffff"
+        color="#8A53FF"
         textAlign="center"
         opacity="70%"
       >

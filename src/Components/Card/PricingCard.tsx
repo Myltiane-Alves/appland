@@ -37,17 +37,17 @@ import {
     return (
       <Card rounded={{ sm: 'xl' }} {...rest} w="333px" mt="100px">
         <Stack spacing={6}>   
-          <Text as="p" fontSize="20px" fontWeight="400" color="#FFF">
+        <Text as="p" fontSize="20px" fontWeight="400" color="#8A53FF" textAlign="center">
             {title}
           </Text>
         </Stack>
         <VStack spacing={6}>   
-          <Heading size="md" fontWeight="extrabold" color="#FFF">
+          <Heading fontSize="22px" fontWeight="extrabold" color="#8A53FF">
             {name}
           </Heading>
         </VStack>
         <Flex align="flex-end" justify="center" fontWeight="extrabold" color={accentColor} my="8">
-          <Heading size="3xl" fontWeight="inherit" lineHeight="0.9em" color="#fff">
+          <Heading fontSize="32px" fontWeight="inherit" lineHeight="0.9em" color="#8A53FF">
             {price}
           </Heading>
       
@@ -64,10 +64,10 @@ import {
             <ListItem 
               fontWeight="medium" 
               key={index} 
-              color="#FFF" 
+              color="#8A53FF" 
               textAlign="center"
             >
-              <Icon as={CheckIcon} color="#FFF"/>
+              <Icon as={CheckIcon} color="#00DFF0"/>
               {feature}
             </ListItem>
           ))}

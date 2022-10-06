@@ -33,7 +33,7 @@ import {
           <Container py={{ base: '4', lg: '5' }}>
             <HStack spacing="10" justify="space-between">
                 <Box>
-
+                  BatePonto
                  <Image src={logo} alt="logo" />
                 </Box>
               {isDesktop ? (
